@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sequence name="FetchDataFromApi" trace="disable" xmlns="http://ws.apache.org/ns/synapse">
+    <log description="Entered">
+        <property name="Log" value="Entered Sequence"/>
+    </log>
+    <call>
+        <endpoint>
+            <http method="get" uri-template="http://localhost:8080/">
+                <suspendOnFailure>
+                    <initialDuration>-1</initialDuration>
+                    <progressionFactor>-1</progressionFactor>
+                    <maximumDuration>0</maximumDuration>
+                </suspendOnFailure>
+                <markForSuspension>
+                    <retriesBeforeSuspension>0</retriesBeforeSuspension>
+                </markForSuspension>
+            </http>
+        </endpoint>
+    </call>
+    <file.write configKey="LocalFileSystem">
+        <filePath>/test.html</filePath>
+        <contentOrExpression>{$body}</contentOrExpression>
+        <mimeType>text/plain</mimeType>
+        <compress>false</compress>
+        <writeMode>Overwrite</writeMode>
+        <enableStreaming>false</enableStreaming>
+        <appendNewLine>false</appendNewLine>
+        <enableLock>false</enableLock>
+        <includeResultTo>Message Body</includeResultTo>
+        <updateLastModified>true</updateLastModified>
+    </file.write>
+</sequence>

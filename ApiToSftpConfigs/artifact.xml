@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?><artifacts>
+    <artifact name="DailyRunner" groupId="com.example.task" version="1.0.0" type="synapse/task" serverRole="EnterpriseServiceBus">
+        <file>src/main/synapse-config/tasks/DailyRunner.xml</file>
+    </artifact>
+    <artifact name="FetchDataFromApi" groupId="com.example.sequence" version="1.0.0" type="synapse/sequence" serverRole="EnterpriseServiceBus">
+        <file>src/main/synapse-config/sequences/FetchDataFromApi.xml</file>
+    </artifact>
+    <artifact name="LocalFileSystem" groupId="com.example.local-entry" version="1.0.0" type="synapse/local-entry" serverRole="EnterpriseServiceBus">
+        <file>/src/main/synapse-config/local-entries/LocalFileSystem.xml</file>
+    </artifact>
+</artifacts>
