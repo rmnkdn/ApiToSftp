@@ -8,4 +8,7 @@
     <artifact name="LocalFileSystem" groupId="com.example.local-entry" version="1.0.0" type="synapse/local-entry" serverRole="EnterpriseServiceBus">
         <file>/src/main/synapse-config/local-entries/LocalFileSystem.xml</file>
     </artifact>
+    <artifact name="main" groupId="com.example.sequence" version="1.0.0" type="synapse/sequence" serverRole="EnterpriseServiceBus">
+        <file>src/main/synapse-config/sequences/main.xml</file>
+    </artifact>
 </artifacts>

@@ -17,5 +17,6 @@
     <module>tasks/DailyRunner</module>
     <module>sequences/FetchDataFromApi</module>
     <module>local-entries/LocalFileSystem</module>
+    <module>sequences/main</module>
   </modules>
 </project>

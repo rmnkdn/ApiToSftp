@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sequence name="main" xmlns="http://ws.apache.org/ns/synapse">
+    <in>
+        <log description="logmsg">
+            <property name="Main Logger" value="In Main Sequence - Entered"/>
+        </log>
+        <respond description="return"/>
+    </in>
+    <out/>
+</sequence>
