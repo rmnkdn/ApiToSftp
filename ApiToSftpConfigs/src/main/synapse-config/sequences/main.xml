@@ -6,5 +6,7 @@
         </log>
         <respond description="return"/>
     </in>
-    <out/>
+    <out>
+        <send/>
+    </out>
 </sequence>
