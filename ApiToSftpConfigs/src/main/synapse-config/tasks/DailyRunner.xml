@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <task class="org.apache.synapse.startup.tasks.MessageInjector" group="synapse.simple.quartz" name="DailyRunner" xmlns="http://ws.apache.org/ns/synapse">
     <trigger count="5" interval="30"/>
-    <property name="injectTo" value="sequence" xmlns:task="http://www.wso2.org/products/wso2commons/tasks"/>
-    <property name="sequenceName" value="FetchDataFromApi" xmlns:task="http://www.wso2.org/products/wso2commons/tasks"/>
     <property name="message" xmlns:task="http://www.wso2.org/products/wso2commons/tasks">
         <request xmlns="">
             <input>1</input>
         </request>
     </property>
+    <property name="format" value="text/xml" xmlns:task="http://www.wso2.org/products/wso2commons/tasks"/>
+    <property name="sequenceName" value="FetchDataFromApi" xmlns:task="http://www.wso2.org/products/wso2commons/tasks"/>
+    <property name="injectTo" value="sequence" xmlns:task="http://www.wso2.org/products/wso2commons/tasks"/>
 </task>
